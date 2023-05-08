@@ -70,7 +70,7 @@ public class WordGame : MonoBehaviour
     {
         // 돈을 UI에 표시
         // 예를 들어, MoneyText라는 이름의 Text UI가 있다면 아래와 같이 사용
-        // GameObject.Find("MoneyText").GetComponent<Text>().text = money.ToString();
+        GameObject.Find("MoneyText").GetComponent<Text>().text = money.ToString();
     }
 
     private void OnApplicationQuit()
