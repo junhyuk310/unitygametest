@@ -47,11 +47,12 @@ public class WordGame : MonoBehaviour
     {
         // 사용자가 입력한 단어
         string input = inputField.text.ToLower();
-
+        if(input == "") return;
+        Debug.Log(input);
         // Dictionary에서 해당 단어를 찾음
         if (wordDictionary.ContainsKey(input))
         {
-            feedbackText.text = "맞았습니다! +" + rewardAmount + "원";
+            feedbackText.text = "맞았습니다! +" + rewardAmount + "점";
             money += rewardAmount;
             PlayerPrefs.SetInt("Money", money);
             UpdateMoneyUI();
@@ -61,7 +62,6 @@ public class WordGame : MonoBehaviour
         {
             feedbackText.text = "틀렸습니다. 다시 시도해보세요.";
         }
-
         // 입력 필드 초기화
         inputField.text = "";
     }
