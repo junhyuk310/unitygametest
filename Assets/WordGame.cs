@@ -72,7 +72,7 @@ public class WordGame : MonoBehaviour
 
     public void CheckWord()
     {
-        rewardAmount = (((Mathf.Pow(1.06f, 10) - Mathf.Pow(1.06f, 10 + sum)) / (1 - 1.06f)));   //콤보에 따라 오르는 점수가 증가하는 수식
+        rewardAmount = 10*(((Mathf.Pow(1.06f, 10) - Mathf.Pow(1.06f, 10 + sum)) / (1 - 1.06f)));   //콤보에 따라 오르는 점수가 증가하는 수식
         string input = inputField.text.ToLower();   //입력받은 모든 단어를 소문자로 바꿔서 저장
 
         var query = wordDictionary.Where(pair => pair.Key == input);     // Dictionary에서 사용자 입력과 일치하는 키(단어)를 검색
