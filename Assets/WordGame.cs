@@ -2,12 +2,14 @@ using System.Collections.Generic;
 using System.Linq;  // LINQ를 사용하기 위해 추가
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WordGame : MonoBehaviour
 {
-    public Text wordText;   // 단어 뜻을 표시할 UI 텍스트
+    public TextMeshProUGUI wordText;// 단어 뜻을 표시할 UI 텍스트
     public InputField inputField;   // 사용자 입력을 받을 입력 필드
-    public Text feedbackText;   // 정답 여부를 표시할 UI 텍스트
+    public TextMeshProUGUI feedbackText;   // 정답 여부를 표시할 UI 텍스트
+
 
     private Dictionary<string, List<string>> wordDictionary;
     private int score;  //총 점수
