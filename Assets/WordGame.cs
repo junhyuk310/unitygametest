@@ -79,9 +79,9 @@ public class WordGame : MonoBehaviour
 
         if (query.Any())    //단어가 일치하는 경우
         {
-            feedbackText.text = "맞았습니다! +" + (int)rewardAmount + "점";   //맞았다고 출력
-            score += (int)rewardAmount; //점수 증가
             sum += 1;   //콤보 증가
+            score += (int)rewardAmount; //점수 증가
+            feedbackText.text = "맞았습니다! +" + (int)rewardAmount + "점";   //맞았다고 출력
             PlayerPrefs.SetInt("Score", score); //점수 저장
             PlayerPrefs.SetInt("Sum", sum); //콤보 저장
             UpdateSumUI();
